@@ -1593,7 +1593,7 @@ class BarkModel(BarkPreTrainedModel):
             # Offload codec_model to CPU
             self.codec_model_hook.offload()
 
-        return audio
+        return audio, output
 
     def can_generate(self) -> bool:
         """
